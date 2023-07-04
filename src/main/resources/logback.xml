@@ -1,0 +1,16 @@
+<configuration>    
+
+    <property name="myPattern1" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"/>
+
+    <appender name="myAppender1" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${myPattern1}</pattern>
+        </encoder>
+    </appender>     
+        
+<!--     <logger name="study.java" level="debug" />     -->
+    
+    <root level="trace">
+        <appender-ref ref="myAppender1" />
+    </root>
+</configuration>
